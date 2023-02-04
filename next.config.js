@@ -6,9 +6,12 @@ const nextConfig = {
       {
         protocol : "https",
         hostname : "fakestoreapi.com",
-        
+
       }
     ]
+  },
+  compiler: {
+    styledComponents: true,
   }
 }
 
