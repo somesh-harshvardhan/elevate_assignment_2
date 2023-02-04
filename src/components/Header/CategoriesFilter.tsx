@@ -31,7 +31,7 @@ const CategoriesFilter = () => {
       placeholder : (styles)=>({...styles,color : "white"})
     };
     const handleChange = (value : any)=>{
-        setSelectedOption(value)
+        setSelectedOption(value);
     }
     return (
       <AsyncSelect

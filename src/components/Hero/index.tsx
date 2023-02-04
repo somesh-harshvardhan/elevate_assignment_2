@@ -1,5 +1,3 @@
-import { useCaraouselsProduct } from "@/src/context/CaraouselContext";
-import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import Header from "../Header";
@@ -20,7 +18,6 @@ const Container = styled.div`
 `;
 
 const Hero = () => {
-  const caraousels = useCaraouselsProduct();
   return (
     <Container>
       <img

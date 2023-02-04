@@ -50,7 +50,7 @@ const SwipeSlide = styled.div`
   }
   @media screen and (max-width: 500px) {
     h1 {
-      font-size: 2.6rem;
+      font-size: 1.8rem;
     }
   }
 `;
@@ -107,7 +107,7 @@ const bannerArray = [
 const Banner = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const sheetRef = useRef<HTMLDivElement | null>(null);
-
+  
   useEffect(() => {
     if (sheetRef.current) {
       const sheetElement = sheetRef.current;

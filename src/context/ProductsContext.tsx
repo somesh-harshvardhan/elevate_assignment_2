@@ -7,13 +7,16 @@ const ProductsObj = createContext<any>({
     search : "",
     searchResults : [],
     setSearchResults : ()=>{},
-    setSearch : ()=>{}
+    setSearch : ()=>{},
+    loading : false,
+    setLoading : ()=>{}
 })
 
 const ProductsContext = ({children} : any) => {
     const [products,setProducts] = useState<any>([]);
     const [search,setSearch] = useState("");
-    const [searchResults,setSearchResults] = useState([])
+    const [searchResults,setSearchResults] = useState([]);
+    const [loading, setLoading] = useState(false);
     useEffect(()=>{
      getAllProducts().then(res=>res.data).then(data=>setProducts(data));
     },[])
@@ -23,7 +26,9 @@ const ProductsContext = ({children} : any) => {
       search,
       setSearch,
       searchResults,
-      setSearchResults
+      setSearchResults,
+      loading,
+      setLoading
     }
   return (
     <ProductsObj.Provider value={productContex}>
