@@ -3,6 +3,7 @@ import { getAllProducts, getProductsByCategories } from "@/src/api";
 import { useCategory } from "@/src/context/CategoriesContext";
 import { useProducts } from "@/src/context/ProductsContext";
 import styled from "styled-components";
+import useResponsive from "@/src/hooks/useResponsive";
 
 const Container = styled.div`
   margin: auto;

@@ -1,5 +1,5 @@
 import React from "react";
-import { IN, EG,PK } from "country-flag-icons/react/3x2";
+import { IN, US } from "country-flag-icons/react/3x2";
 import Select, { StylesConfig } from "react-select/";
 const formatOptionLabel = ({ value, label, flag }: any) => {
   return (
@@ -12,14 +12,14 @@ const formatOptionLabel = ({ value, label, flag }: any) => {
 const SelectLanguage = () => {
   const options = [
     {
-      label: `Indian`,
+      label: `Hindi`,
       value: "india",
       flag: <IN height={10} />,
     },
     {
       label: `English`,
       value: "english",
-      flag: <EG height={10} />,
+      flag: <US height={10} />,
     }
   ];
   const colorStyles: StylesConfig = {
@@ -38,7 +38,7 @@ const SelectLanguage = () => {
   return (
     <Select
       options={options}
-      defaultValue={options[0]}
+      defaultValue={options[1]}
       styles={colorStyles}
       formatOptionLabel={formatOptionLabel}
       components={{

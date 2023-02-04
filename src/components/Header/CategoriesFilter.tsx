@@ -3,7 +3,9 @@ import { StylesConfig } from "react-select";
 import { useCategory } from "@/src/context/CategoriesContext";
 import { AiFillCaretDown } from "react-icons/ai";
 import { useState } from "react";
+import { useProducts } from "@/src/context/ProductsContext";
 const CategoriesFilter = () => {
+    const {setSearch} = useProducts();
     const {  options,selected,setSelectedOption } = useCategory();
     const colorStyles: StylesConfig = {
       control: (styles) => ({
@@ -32,6 +34,7 @@ const CategoriesFilter = () => {
     };
     const handleChange = (value : any)=>{
         setSelectedOption(value);
+        setSearch("")
     }
     return (
       <AsyncSelect
