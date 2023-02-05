@@ -8,12 +8,13 @@ const useResponsive = () => {
    const handler = ()=>{
      setScreenWidth(window.innerWidth)
    }
+   setScreenWidth(window.innerWidth)
    window.addEventListener("resize",handler);
 
    return ()=>window.removeEventListener("resize",handler);
   },[]);
   useEffect(()=>{
-   if(screenWidth < 500) setIsMobile(true);
+   if(screenWidth < 768) setIsMobile(true);
    else setIsMobile(false);
   },[screenWidth])
 

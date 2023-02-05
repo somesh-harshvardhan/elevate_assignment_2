@@ -6,13 +6,14 @@ import Search from "./Search";
 import SelectLanguage from "./SelectLanguage";
 import {BsCartFill} from 'react-icons/bs';
 import {FaUser} from 'react-icons/fa'
+import useResponsive from "@/src/hooks/useResponsive";
 const Container = styled.div`
   display: flex;
   column-gap: 20px;
   justify-content: flex-start;
   align-items: center;
 
-  @media screen and (max-width : 600px) {
+  @media screen and (max-width : 768px) {
     flex-direction: column;
     align-items: stretch;
     gap: 30px;
@@ -22,11 +23,11 @@ const Cart = styled.div`
     color: white;
 `
 
-const ActionBar = () => {
-    
+const ActionBar = ({setSideBarActive} : any) => {
+    const {isMobile} = useResponsive();
   return (
     <Container>
-      <GiHamburgerMenu size={40} cursor={"pointer"} />
+      <GiHamburgerMenu size={40} cursor={"pointer"} onClick={()=>isMobile && setSideBarActive(true)}/>
       <CategoriesFilter />
       <Search/>
       <SelectLanguage/>

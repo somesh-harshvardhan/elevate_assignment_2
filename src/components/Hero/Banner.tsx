@@ -44,8 +44,8 @@ const SwipeSlide = styled.div`
     max-width: 70%;
   }
   @media screen and (max-width: 768px) {
-    h1{
-        font-size: 3rem;
+    h1 {
+      font-size: 3rem;
     }
   }
   @media screen and (max-width: 500px) {
@@ -84,10 +84,10 @@ const BuyNowButton = styled.button`
   text-transform: uppercase;
   cursor: pointer;
   @media screen and (max-width: 768px) {
-   font-size: 1.8rem;
+    font-size: 1.8rem;
   }
   @media screen and (max-width: 500px) {
-   font-size: 1.3rem;
+    font-size: 1.3rem;
   }
 `;
 const bannerArray = [
@@ -107,7 +107,7 @@ const bannerArray = [
 const Banner = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const sheetRef = useRef<HTMLDivElement | null>(null);
-  
+
   useEffect(() => {
     if (sheetRef.current) {
       const sheetElement = sheetRef.current;
